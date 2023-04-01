@@ -1,0 +1,17 @@
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.BLL\bin\Debug\net7.0\DeepOrangeWebApi.BLL.deps.json
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.BLL\bin\Debug\net7.0\DeepOrangeWebApi.BLL.dll
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.BLL\bin\Debug\net7.0\DeepOrangeWebApi.BLL.pdb
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.BLL\bin\Debug\net7.0\DeepOrangeWebApi.DAL.dll
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.BLL\bin\Debug\net7.0\DeepOrangeWebApi.DAL.pdb
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.BLL\obj\Debug\net7.0\DeepOrangeWebApi.BLL.csproj.AssemblyReference.cache
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.BLL\obj\Debug\net7.0\DeepOrangeWebApi.BLL.GeneratedMSBuildEditorConfig.editorconfig
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.BLL\obj\Debug\net7.0\DeepOrangeWebApi.BLL.AssemblyInfoInputs.cache
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.BLL\obj\Debug\net7.0\DeepOrangeWebApi.BLL.AssemblyInfo.cs
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.BLL\obj\Debug\net7.0\DeepOrangeWebApi.BLL.csproj.CoreCompileInputs.cache
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.BLL\obj\Debug\net7.0\DeepOrangeWebApi.BLL.csproj.CopyComplete
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.BLL\obj\Debug\net7.0\DeepOrangeWebApi.BLL.dll
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.BLL\obj\Debug\net7.0\refint\DeepOrangeWebApi.BLL.dll
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.BLL\obj\Debug\net7.0\DeepOrangeWebApi.BLL.pdb
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.BLL\obj\Debug\net7.0\ref\DeepOrangeWebApi.BLL.dll
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.BLL\bin\Debug\net7.0\DeepOrangeWebApi.BLL.runtimeconfig.json
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.BLL\obj\Debug\net7.0\DeepOrangeWebApi.BLL.genruntimeconfig.cache

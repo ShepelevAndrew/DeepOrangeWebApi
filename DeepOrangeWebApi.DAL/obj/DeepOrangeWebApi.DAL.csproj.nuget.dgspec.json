@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Q:\\Projects\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\DeepOrangeWebApi.DAL.csproj": {}
+    "Q:\\GitHub\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\DeepOrangeWebApi.DAL.csproj": {}
   },
   "projects": {
-    "Q:\\Projects\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\DeepOrangeWebApi.DAL.csproj": {
+    "Q:\\GitHub\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\DeepOrangeWebApi.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Q:\\Projects\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\DeepOrangeWebApi.DAL.csproj",
+        "projectUniqueName": "Q:\\GitHub\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\DeepOrangeWebApi.DAL.csproj",
         "projectName": "DeepOrangeWebApi.DAL",
-        "projectPath": "Q:\\Projects\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\DeepOrangeWebApi.DAL.csproj",
+        "projectPath": "Q:\\GitHub\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\DeepOrangeWebApi.DAL.csproj",
         "packagesPath": "C:\\Users\\computer\\.nuget\\packages\\",
-        "outputPath": "Q:\\Projects\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\obj\\",
+        "outputPath": "Q:\\GitHub\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,6 +43,26 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

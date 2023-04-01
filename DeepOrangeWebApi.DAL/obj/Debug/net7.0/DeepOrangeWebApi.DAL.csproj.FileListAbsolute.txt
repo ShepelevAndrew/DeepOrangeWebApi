@@ -1,0 +1,14 @@
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.DAL\bin\Debug\net7.0\DeepOrangeWebApi.DAL.deps.json
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.DAL\bin\Debug\net7.0\DeepOrangeWebApi.DAL.dll
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.DAL\bin\Debug\net7.0\DeepOrangeWebApi.DAL.pdb
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.DAL\obj\Debug\net7.0\DeepOrangeWebApi.DAL.csproj.AssemblyReference.cache
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.DAL\obj\Debug\net7.0\DeepOrangeWebApi.DAL.GeneratedMSBuildEditorConfig.editorconfig
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.DAL\obj\Debug\net7.0\DeepOrangeWebApi.DAL.AssemblyInfoInputs.cache
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.DAL\obj\Debug\net7.0\DeepOrangeWebApi.DAL.AssemblyInfo.cs
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.DAL\obj\Debug\net7.0\DeepOrangeWebApi.DAL.csproj.CoreCompileInputs.cache
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.DAL\obj\Debug\net7.0\DeepOrangeWebApi.DAL.dll
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.DAL\obj\Debug\net7.0\refint\DeepOrangeWebApi.DAL.dll
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.DAL\obj\Debug\net7.0\DeepOrangeWebApi.DAL.pdb
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.DAL\obj\Debug\net7.0\ref\DeepOrangeWebApi.DAL.dll
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.DAL\bin\Debug\net7.0\DeepOrangeWebApi.DAL.runtimeconfig.json
+Q:\GitHub\DeepOrangeWebApi\DeepOrangeWebApi.DAL\obj\Debug\net7.0\DeepOrangeWebApi.DAL.genruntimeconfig.cache
