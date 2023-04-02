@@ -13,8 +13,13 @@ builder.Services.AddDbContext<DbContextApp>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnectionString"),
     options => options.MigrationsAssembly("DeepOrangeWebApi")));
 
-builder.Services.AddScoped<IBaseRepository<Employee>, EmployeeRepository>();
-builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+builder.Services.AddScoped<IBaseRepository<Employee>, EmployeeRepository>()
+                .AddScoped<IBaseRepository<Direction>, DirectionRepository>()
+                .AddScoped<IBaseRepository<Technology>, TechnologyRepository>();
+
+builder.Services.AddScoped<IBaseService<Employee>, EmployeeService>()
+                .AddScoped<IBaseService<Direction>, DirectionService>()
+                .AddScoped<IBaseService<Technology>, TechnologyService>();
 
 builder.Services.AddControllers();
 

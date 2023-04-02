@@ -1,9 +1,11 @@
-﻿namespace DeepOrangeWebApi.DAL.Repositories.Interfaces;
+﻿using DeepOrangeWebApi.DAL.Entities;
+
+namespace DeepOrangeWebApi.DAL.Repositories.Interfaces;
 public interface IBaseRepository<T>
 {
-    void Add(T customer);
-    void Update(T customer);
-    void Delete(int id);
+    Task AddAsync(T employee);
     Task<IEnumerable<T>> GetAllAsync();
-    T GetById(int id);
+    Task<T> GetByIdAsync(int id);
+    Task UpdateAsync(T customer);
+    Task DeleteAsync(int id);
 }
