@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Q:\\GitHub\\DeepOrangeWebApi\\DeepOrangeWebApi.BLL\\DeepOrangeWebApi.BLL.csproj": {}
+    "Q:\\GitHub\\DeepOrange\\backend\\DeepOrangeWebApi\\DeepOrangeWebApi.BLL\\DeepOrangeWebApi.BLL.csproj": {}
   },
   "projects": {
-    "Q:\\GitHub\\DeepOrangeWebApi\\DeepOrangeWebApi.BLL\\DeepOrangeWebApi.BLL.csproj": {
+    "Q:\\GitHub\\DeepOrange\\backend\\DeepOrangeWebApi\\DeepOrangeWebApi.BLL\\DeepOrangeWebApi.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Q:\\GitHub\\DeepOrangeWebApi\\DeepOrangeWebApi.BLL\\DeepOrangeWebApi.BLL.csproj",
+        "projectUniqueName": "Q:\\GitHub\\DeepOrange\\backend\\DeepOrangeWebApi\\DeepOrangeWebApi.BLL\\DeepOrangeWebApi.BLL.csproj",
         "projectName": "DeepOrangeWebApi.BLL",
-        "projectPath": "Q:\\GitHub\\DeepOrangeWebApi\\DeepOrangeWebApi.BLL\\DeepOrangeWebApi.BLL.csproj",
+        "projectPath": "Q:\\GitHub\\DeepOrange\\backend\\DeepOrangeWebApi\\DeepOrangeWebApi.BLL\\DeepOrangeWebApi.BLL.csproj",
         "packagesPath": "C:\\Users\\computer\\.nuget\\packages\\",
-        "outputPath": "Q:\\GitHub\\DeepOrangeWebApi\\DeepOrangeWebApi.BLL\\obj\\",
+        "outputPath": "Q:\\GitHub\\DeepOrange\\backend\\DeepOrangeWebApi\\DeepOrangeWebApi.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -26,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "Q:\\GitHub\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\DeepOrangeWebApi.DAL.csproj": {
-                "projectPath": "Q:\\GitHub\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\DeepOrangeWebApi.DAL.csproj"
+              "Q:\\GitHub\\DeepOrange\\backend\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\DeepOrangeWebApi.DAL.csproj": {
+                "projectPath": "Q:\\GitHub\\DeepOrange\\backend\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\DeepOrangeWebApi.DAL.csproj"
               }
             }
           }
@@ -48,6 +49,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.4, )"
@@ -87,14 +96,14 @@
         }
       }
     },
-    "Q:\\GitHub\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\DeepOrangeWebApi.DAL.csproj": {
+    "Q:\\GitHub\\DeepOrange\\backend\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\DeepOrangeWebApi.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Q:\\GitHub\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\DeepOrangeWebApi.DAL.csproj",
+        "projectUniqueName": "Q:\\GitHub\\DeepOrange\\backend\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\DeepOrangeWebApi.DAL.csproj",
         "projectName": "DeepOrangeWebApi.DAL",
-        "projectPath": "Q:\\GitHub\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\DeepOrangeWebApi.DAL.csproj",
+        "projectPath": "Q:\\GitHub\\DeepOrange\\backend\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\DeepOrangeWebApi.DAL.csproj",
         "packagesPath": "C:\\Users\\computer\\.nuget\\packages\\",
-        "outputPath": "Q:\\GitHub\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\obj\\",
+        "outputPath": "Q:\\GitHub\\DeepOrange\\backend\\DeepOrangeWebApi\\DeepOrangeWebApi.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -109,6 +118,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -127,6 +137,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.4, )"

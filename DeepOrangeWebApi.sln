@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepOrangeWebApi.BLL", "Dee
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepOrangeWebApi.DAL", "DeepOrangeWebApi.DAL\DeepOrangeWebApi.DAL.csproj", "{71E19EC5-2D82-4E5B-8FAB-CF431CEF6C54}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{67E9D5F9-43EB-45B5-956D-09A525895CCE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F69EB475-F8C3-4A56-8B1A-608B40A2489F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,5 +37,10 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B066AD6B-D7E6-4C2F-8F20-6F7F066DE1F1}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9083BF90-663C-4736-B7D4-0A5BE6095EDE} = {67E9D5F9-43EB-45B5-956D-09A525895CCE}
+		{CF9A7387-D126-4781-A191-3134302EB27B} = {67E9D5F9-43EB-45B5-956D-09A525895CCE}
+		{71E19EC5-2D82-4E5B-8FAB-CF431CEF6C54} = {67E9D5F9-43EB-45B5-956D-09A525895CCE}
 	EndGlobalSection
 EndGlobal

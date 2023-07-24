@@ -36,27 +36,15 @@ namespace DeepOrangeWebApi.Migrations
                     b.HasKey("DirectionId");
 
                     b.ToTable("Directions");
-
-                    b.HasData(
-                        new
-                        {
-                            DirectionId = 1,
-                            DirectionName = "PHP"
-                        },
-                        new
-                        {
-                            DirectionId = 2,
-                            DirectionName = "Python"
-                        });
                 });
 
-            modelBuilder.Entity("DeepOrangeWebApi.DAL.Entities.Employee", b =>
+            modelBuilder.Entity("DeepOrangeWebApi.DAL.Entities.Profile", b =>
                 {
-                    b.Property<int>("EmployeeId")
+                    b.Property<int>("ProfileId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("EmployeeId"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("ProfileId"));
 
                     b.Property<string>("LastName")
                         .HasColumnType("text");
@@ -64,17 +52,12 @@ namespace DeepOrangeWebApi.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("text");
 
-                    b.HasKey("EmployeeId");
+                    b.Property<string>("UserId")
+                        .HasColumnType("text");
 
-                    b.ToTable("Employees");
+                    b.HasKey("ProfileId");
 
-                    b.HasData(
-                        new
-                        {
-                            EmployeeId = 1,
-                            LastName = "Honcharov",
-                            Name = "Mykyta"
-                        });
+                    b.ToTable("Profiles");
                 });
 
             modelBuilder.Entity("DeepOrangeWebApi.DAL.Entities.Technology", b =>
@@ -97,58 +80,21 @@ namespace DeepOrangeWebApi.Migrations
                     b.HasIndex("DirectionId");
 
                     b.ToTable("Technologies");
-
-                    b.HasData(
-                        new
-                        {
-                            TechnologyId = 1,
-                            DirectionId = 1,
-                            TechnologyName = "Magento"
-                        },
-                        new
-                        {
-                            TechnologyId = 2,
-                            DirectionId = 2,
-                            TechnologyName = "Flask"
-                        },
-                        new
-                        {
-                            TechnologyId = 3,
-                            DirectionId = 2,
-                            TechnologyName = "NumPy"
-                        });
                 });
 
-            modelBuilder.Entity("EmployeeTechnology", b =>
+            modelBuilder.Entity("ProfileTechnology", b =>
                 {
-                    b.Property<int>("EmployeesEmployeeId")
+                    b.Property<int>("ProfilesProfileId")
                         .HasColumnType("integer");
 
                     b.Property<int>("TechnologiesTechnologyId")
                         .HasColumnType("integer");
 
-                    b.HasKey("EmployeesEmployeeId", "TechnologiesTechnologyId");
+                    b.HasKey("ProfilesProfileId", "TechnologiesTechnologyId");
 
                     b.HasIndex("TechnologiesTechnologyId");
 
-                    b.ToTable("EmployeeTechnologies", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            EmployeesEmployeeId = 1,
-                            TechnologiesTechnologyId = 1
-                        },
-                        new
-                        {
-                            EmployeesEmployeeId = 1,
-                            TechnologiesTechnologyId = 2
-                        },
-                        new
-                        {
-                            EmployeesEmployeeId = 1,
-                            TechnologiesTechnologyId = 3
-                        });
+                    b.ToTable("ProfileTechnologies", (string)null);
                 });
 
             modelBuilder.Entity("DeepOrangeWebApi.DAL.Entities.Technology", b =>
@@ -162,11 +108,11 @@ namespace DeepOrangeWebApi.Migrations
                     b.Navigation("Direction");
                 });
 
-            modelBuilder.Entity("EmployeeTechnology", b =>
+            modelBuilder.Entity("ProfileTechnology", b =>
                 {
-                    b.HasOne("DeepOrangeWebApi.DAL.Entities.Employee", null)
+                    b.HasOne("DeepOrangeWebApi.DAL.Entities.Profile", null)
                         .WithMany()
-                        .HasForeignKey("EmployeesEmployeeId")
+                        .HasForeignKey("ProfilesProfileId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

@@ -1,12 +1,10 @@
 ﻿using DeepOrangeWebApi.DAL.Entities;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection.Emit;
-using System.Reflection.Metadata;
 
 namespace DeepOrangeWebApi.DAL.EF;
 public class DbContextApp : DbContext
 {
-    public DbSet<Employee> Employees { get; set; }
+    public DbSet<Profile> Profiles { get; set; }
     public DbSet<Technology> Technologies { get; set; }
     public DbSet<Direction> Directions { get; set; }
 
@@ -19,10 +17,10 @@ public class DbContextApp : DbContext
             .WithMany(d => d.Technologies)
             .OnDelete(DeleteBehavior.Cascade);
 
-        builder.Entity<Employee>()
-            .HasMany(e => e.Technologies)
-            .WithMany(t => t.Employees)
-            .UsingEntity(j => j.ToTable("EmployeeTechnologies"));
+        builder.Entity<Profile>()
+            .HasMany(p => p.Technologies)
+            .WithMany(t => t.Profiles)
+            .UsingEntity(j => j.ToTable("ProfileTechnologies"));
 
         base.OnModelCreating(builder);
     }

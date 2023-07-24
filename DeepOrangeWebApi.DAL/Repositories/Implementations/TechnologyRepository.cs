@@ -1,11 +1,10 @@
 ﻿using DeepOrangeWebApi.DAL.EF;
 using DeepOrangeWebApi.DAL.Entities;
 using DeepOrangeWebApi.DAL.Repositories.Interfaces;
-using Microsoft.EntityFrameworkCore;
 
 namespace DeepOrangeWebApi.DAL.Repositories.Implementations;
 
-public class TechnologyRepository : IBaseRepository<Technology>
+public class TechnologyRepository : ITechnologyRepository
 {
     private readonly DbContextApp _dbContextApp;
 
@@ -14,56 +13,54 @@ public class TechnologyRepository : IBaseRepository<Technology>
         _dbContextApp = dbContextApp;
     }
 
-    public async Task AddAsync(Technology technology)
+    public async Task AddAsync(int directionId, Technology technology)
     {
-        var tech = new Technology
+        if (technology == null)
         {
-            TechnologyId = technology.TechnologyId,
-            TechnologyName = technology.TechnologyName,
-            DirectionId = technology.DirectionId
-        };
+            throw new ArgumentNullException(nameof(technology));
+        }
 
-        _dbContextApp.Add(tech);
+        technology.DirectionId = directionId;
+
+        _dbContextApp.Add(technology);
         await _dbContextApp.SaveChangesAsync();
     }
 
-    public async Task<IEnumerable<Technology>> GetAllAsync()
+    public Technology GetByIdAsync(int directionId, int technologyId)
     {
-        var directions = await _dbContextApp.Technologies.Include(t => t.Employees)
-                                                         .Include(t => t.Employees)
-                                                         .Select(t => new Technology
-                                                         {
-                                                             TechnologyId = t.TechnologyId,
-                                                             TechnologyName = t.TechnologyName,
-                                                             Direction = t.Direction,
-                                                             Employees = t.Employees
-                                                         }).ToListAsync();
-        return directions;
+        var technology = _dbContextApp.Technologies.Where(t => t.DirectionId == directionId && t.TechnologyId == technologyId).FirstOrDefault();
+
+        return technology;
     }
 
-    public async Task<Technology> GetByIdAsync(int id)
+    public IEnumerable<Technology> GetTechnologiesForDirection(int directionId)
     {
-        var directions = await _dbContextApp.Technologies.Include(t => t.Employees)
-                                                         .Include(t => t.Employees)
-                                                         .Select(t => new Technology
-                                                         {
-                                                             TechnologyId = t.TechnologyId,
-                                                             TechnologyName = t.TechnologyName,
-                                                             Direction = t.Direction,
-                                                             Employees = t.Employees
-                                                         })
-                                                         .FirstOrDefaultAsync(t => t.TechnologyId == id);
-        return directions;
+        var technologies = _dbContextApp.Technologies.Where(t => t.DirectionId == directionId);
+
+        return technologies;
     }
 
-    public async Task UpdateAsync(Technology technology)
+    public async Task UpdateAsync(int directionId, Technology technology)
     {
+        if(technology == null)
+        {
+            throw new ArgumentNullException(nameof(technology));
+        }
+
+        technology.DirectionId = directionId;
+
         _dbContextApp.Update(technology);
         await _dbContextApp.SaveChangesAsync();
     }
-    public async Task DeleteAsync(int id)
+
+    public async Task DeleteAsync(int directionId, int technologyId)
     {
-        var technology = await _dbContextApp.Technologies.FindAsync(id);
+        var technology = _dbContextApp.Technologies.Where(t => t.DirectionId == directionId && t.TechnologyId == technologyId).FirstOrDefault();
+
+        if(technology == null)
+        {
+            throw new ArgumentNullException(nameof(technology));
+        }
 
         _dbContextApp.Technologies.Remove(technology);
         await _dbContextApp.SaveChangesAsync();

@@ -1,40 +1,42 @@
-﻿using DeepOrangeWebApi.BLL.Services.Interfaces;
+﻿using AutoMapper;
+using DeepOrangeWebApi.BLL.Models.DTOs;
+using DeepOrangeWebApi.BLL.Services.Interfaces;
 using DeepOrangeWebApi.DAL.Entities;
 using DeepOrangeWebApi.DAL.Repositories.Interfaces;
 
 namespace DeepOrangeWebApi.BLL.Services.Implementations;
 
-public class DirectionService : IBaseService<Direction>
+public class DirectionService : IServiceBase<DirectionCreateDto, DirectionReadDto>
 {
     private readonly IBaseRepository<Direction> _directionRepository;
+    private readonly IMapper _mapper;
 
-    public DirectionService(IBaseRepository<Direction> directionRepository)
+    public DirectionService(IBaseRepository<Direction> directionRepository, IMapper mapper)
     {
         _directionRepository = directionRepository;
+        _mapper = mapper;
     }
 
-    public async Task CreateAsync(Direction direction)
+    public async Task CreateAsync(DirectionCreateDto direction)
     {
-        await _directionRepository.AddAsync(direction);
+        await _directionRepository.AddAsync(_mapper.Map<Direction>(direction));
     }
 
-    public async Task<IEnumerable<Direction>> GetAsync()
+    public async Task<IEnumerable<DirectionReadDto>> GetAsync()
     {
         var directions = await _directionRepository.GetAllAsync();
-        return directions;
+        return _mapper.Map<IEnumerable<DirectionReadDto>>(directions);
     }
 
-    public async Task<Direction> GetByIdAsync(int id)
+    public async Task<DirectionReadDto> GetByIdAsync(int id)
     {
         var direction = await _directionRepository.GetByIdAsync(id);
-        return direction;
+        return _mapper.Map<DirectionReadDto>(direction);
     }
 
-    public async Task UpdateAsync(Direction direction)
+    public async Task UpdateAsync(DirectionCreateDto direction)
     {
-        direction.Technologies = null;
-
-        await _directionRepository.UpdateAsync(direction);
+        await _directionRepository.UpdateAsync(_mapper.Map<Direction>(direction));
     }
 
     public async Task DeleteAsync(int id)

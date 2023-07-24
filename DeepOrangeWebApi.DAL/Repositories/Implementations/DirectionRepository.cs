@@ -15,47 +15,22 @@ public class DirectionRepository : IBaseRepository<Direction>
 
     public async Task AddAsync(Direction direction)
     {
-        direction.Technologies = null;
-
+        _dbContextApp.Technologies.AttachRange(direction.Technologies);
         _dbContextApp.Add(direction);
         await _dbContextApp.SaveChangesAsync();
     }
 
     public async Task<IEnumerable<Direction>> GetAllAsync()
     {
-        var directions = await _dbContextApp.Directions.Include(d => d.Technologies)
-                                                       .Select(d => new Direction
-                                                       {
-                                                           DirectionId = d.DirectionId,
-                                                           DirectionName= d.DirectionName,
-                                                           Technologies = d.Technologies.Select(t => new Technology
-                                                           {
-                                                               TechnologyId = t.TechnologyId,
-                                                               TechnologyName = t.TechnologyName,
-                                                               DirectionId = t.DirectionId,
-                                                               Employees = t.Employees
-                                                           }).ToList()
-                                                       }).ToListAsync();
+        var directions = await _dbContextApp.Directions.Include(d => d.Technologies).ToListAsync();
+
         return directions;
     }
 
     public async Task<Direction> GetByIdAsync(int id)
     {
-        var direction = await _dbContextApp.Directions.Include(d => d.Technologies)
-                                                      .ThenInclude(t => t.Employees)
-                                                      .Select(d => new Direction
-                                                      {
-                                                          DirectionId = d.DirectionId,
-                                                          DirectionName = d.DirectionName,
-                                                          Technologies = d.Technologies.Select(t => new Technology
-                                                          {
-                                                              TechnologyId = t.TechnologyId,
-                                                              TechnologyName = t.TechnologyName,
-                                                              DirectionId = t.DirectionId,
-                                                              Employees = t.Employees
-                                                          }).ToList()
-                                                      })
-                                                      .FirstOrDefaultAsync(d => d.DirectionId == id);
+        var direction = await _dbContextApp.Directions.Include(d => d.Technologies).FirstOrDefaultAsync(d => d.DirectionId == id);
+
         return direction;
     }
 
